@@ -22,12 +22,12 @@
 
 +(ESBarButtonItem*)barButtonItemToEditTable:(UITableView*)table
 {
-    ESBarButtonItem* item;
-    UITableView* t = table;
-    item = [ESBarButtonItem barButtonItemWithTitle:@"Edit" action:^{
+    ESBarButtonItem* item = [ESBarButtonItem barButtonItemWithTitle:@"Edit" action:^{
+        UITableView* t = table;
+        ESBarButtonItem* bbi = item ;
         [t setEditing:!t.editing animated:YES];
-        item.title = t.editing ? @"Done" : @"Edit";
-        item.style = t.editing ? UIBarButtonItemStyleDone : UIBarButtonItemStylePlain;
+        bbi.title = t.editing ? @"Done" : @"Edit";
+        bbi.style = t.editing ? UIBarButtonItemStyleDone : UIBarButtonItemStylePlain;
     }];
     return item;
 }
