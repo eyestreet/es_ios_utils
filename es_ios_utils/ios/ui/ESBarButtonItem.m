@@ -43,17 +43,19 @@
 
 -(void)pressed:(id)sender
 {
-    if(popoverController)
+    if(self.popoverController)
         [self dismissPopover];
     else
     {
-        //performSelector gets an ARC warning
-        if(userTarget && userAction && [userTarget respondsToSelector:userAction])
-            objc_msgSend(userTarget, userAction);
+        if(self.userTarget && self.userAction && [self.userTarget respondsToSelector:self.userAction])
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+            [self.userTarget performSelector:self.userAction];
+#pragma clang diagnostic pop
         
         [self presentPopover];
         
-        if(blockAction) blockAction();
+        if(self.blockAction) self.blockAction();
     }
 }
 
