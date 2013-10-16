@@ -147,11 +147,11 @@
     return nil;
 }
 
--(id)firstObject
-{
-    NSLog(@"deprecated: `Array.firstObject`. Use `Array.first`."); // 1-10-2012
-    return self.first;
-}
+//-(id)firstObject
+//{
+//    NSLog(@"deprecated: `Array.firstObject`. Use `Array.first`."); // 1-10-2012
+//    return self.first;
+//}
 
 -(id)last
 {

@@ -40,7 +40,7 @@ typedef void(^ESNSManagedObjectBlock)(NSManagedObject*);
   // Object Accessors
   -(id)at:(int)index; //shorthand for objectAtIndex:
   @property(readonly) id first;
-  @property(readonly) id firstObject; //deprecated
+//  @property(readonly) id firstObject; //deprecated
   @property(readonly) id last;
 
   //
