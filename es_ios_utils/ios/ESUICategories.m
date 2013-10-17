@@ -494,8 +494,8 @@
 {
     //force portrait orientation without private methods.
     UIViewController *c = [[UIViewController alloc]init];
-    [self presentModalViewController:c animated:NO];
-    [self dismissModalViewControllerAnimated:NO];
+    [self presentViewController:c animated:NO completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 -(void)forcePopoverSize
