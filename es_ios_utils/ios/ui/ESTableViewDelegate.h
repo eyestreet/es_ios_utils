@@ -6,10 +6,10 @@
       -(id)objectFor:(NSIndexPath*)ip;
       -(int)numberOfRowsInSection:(int)s;
     @optional
-      // Either sectionTitles or numberOfSections and titleForSection must be implemented
+      // Either sectionTitles or numberOfSections and esTitleForSection must be implemented
       -(NSArray*)sectionTitles;
       -(int)numberOfSections;
-      -(NSString*)titleForSection:(int)s;
+      -(NSString*)esTitleForSection:(int)s; // renamed with es prefix to avoid validation warnings about a conflict with an apple private method
 
   #pragma mark - View
     @required

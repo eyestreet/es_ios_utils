@@ -38,7 +38,7 @@
 {
     if([esDelegate respondsToSelector:@selector(sectionTitles)])
         return [esDelegate.sectionTitles objectAtIndex:s];
-    return [esDelegate titleForSection:s];
+    return [esDelegate esTitleForSection:s];
 }
 
 
